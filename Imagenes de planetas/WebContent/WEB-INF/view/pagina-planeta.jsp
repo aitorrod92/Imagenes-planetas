@@ -8,7 +8,7 @@ href="${pageContext.request.contextPath}/resources/css/estilo.css">
 <h2> El nombre del planeta elegido es ${planeta.nombre}</h2>
 <br><br>
 <img src="${pageContext.request.contextPath}/resources
-		/imagenes/${planeta.nombre}.jpeg" width="50%" height="50%"> 
+		/imagenes/${planeta.nombre}.jpeg" width="${planeta.tamanio}"> 
 <br><br>
 <a href="pantalla-principal">Volver atrás</a>
 </body>

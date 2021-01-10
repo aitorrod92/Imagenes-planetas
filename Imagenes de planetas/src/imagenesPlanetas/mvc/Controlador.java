@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/app")
 public class Controlador {
 	
-	private String [] planetas = {"Marte", "Venus"};
+	private String [] planetas = {"Mercurio", "Marte", "Tierra" , "Venus", "Júpiter", "Saturno",  "Urano", "Neptuno", "Plutón"};
 	private HashSet <String >setPlanetas = new HashSet<String>(Arrays.asList(planetas));
-	
-	
+		
 		@RequestMapping("/pantalla-principal")
 		public String showPage(Model model) {
 		    model.addAttribute("planeta",new Planeta());
@@ -48,14 +48,14 @@ public class Controlador {
 
 		private String obtenerNombreAdaptado(Planeta elPlaneta) {
 			String nombrePlaneta = elPlaneta.getNombre();
+			System.out.println(nombrePlaneta);
 			nombrePlaneta = nombrePlaneta.toLowerCase().trim();
-			nombrePlaneta = nombrePlaneta.replace(nombrePlaneta.substring(0,1), 
+			nombrePlaneta = nombrePlaneta.replaceFirst(nombrePlaneta.substring(0,1), 
 					nombrePlaneta.substring(0,1).toUpperCase());
+			System.out.println(nombrePlaneta);
 			return nombrePlaneta;
 		}
-
-
-		
+	
 		/**
 		 * Recorta los strings para que no haya espacios en blanco y 
 		 * los convierte en null si quedan en "".

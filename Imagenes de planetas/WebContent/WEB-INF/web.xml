@@ -5,9 +5,13 @@
 	id="WebApp_ID" version="3.1">
 
 	<display-name>imagenesPlanetas-mvc</display-name>
+	
+	<welcome-file-list>
+    	<welcome-file>app.jsp</welcome-file>
+    	<welcome-file>index.html</welcome-file>
+  	</welcome-file-list>
 
 	<absolute-ordering />
-
 	<!-- Spring MVC Configs -->
 
 	<!-- Step 1: Configure Spring MVC Dispatcher Servlet -->

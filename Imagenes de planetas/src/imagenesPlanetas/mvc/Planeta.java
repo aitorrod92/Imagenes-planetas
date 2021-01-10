@@ -9,6 +9,8 @@ public class Planeta {
 	@Pattern(regexp="\\D{5,10}")
 	private String nombre;
 	
+	private int tamanio = 100;
+	
 	public Planeta() {
 		
 	}
@@ -19,5 +21,13 @@ public class Planeta {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	
+	public int getTamanio() {
+		return tamanio;
+	}
+
+	public void setTamanio(int tamanio) {
+		this.tamanio = tamanio;
 	}
 }
